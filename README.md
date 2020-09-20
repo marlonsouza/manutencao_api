@@ -43,7 +43,7 @@ password: <vazio>
 
 **Todas as demais requisições vão necessitar do Bearer token**
 
-##Equipamento
+## Equipamento
 ###### Para cadastrar um equipamento
 
 ```
@@ -69,7 +69,7 @@ GET
 http://localhost:8080/equipamento
 ```
 
-##Cliente
+## Cliente
 ###### Para cadastrar um cliente
 
 ```
