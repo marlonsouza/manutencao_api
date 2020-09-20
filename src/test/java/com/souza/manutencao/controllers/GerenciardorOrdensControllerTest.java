@@ -26,6 +26,12 @@ public class GerenciardorOrdensControllerTest {
     }
 
     @Test(expected = OrdemStatusException.class)
+    public void iniciarComExcessao(){
+        OrdemServico ordemServico = OrdemServico.builder().ordemStatus(OrdemStatus.FINALIZADA).build();
+        controller.iniciar(ordemServico);
+    }
+
+    @Test(expected = OrdemStatusException.class)
     public void finalizarOrdemSemStatusExecucao() {
         OrdemServico ordem = OrdemServico.builder().ordemStatus(OrdemStatus.CRIADA).build();
         controller.finalizar(ordem);

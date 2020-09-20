@@ -11,6 +11,10 @@ import java.time.LocalDateTime;
 public class GerenciardorOrdensController {
 
     public OrdemServico iniciar(OrdemServico ordem){
+        if(ordem.getOrdemStatus() != OrdemStatus.CRIADA){
+            throw new OrdemStatusException("Ordem de serviço não está com status criado.");
+        }
+
         ordem.setOrdemStatus(OrdemStatus.EM_EXECUCAO);
         ordem.setInicioServico(LocalDateTime.now());
 

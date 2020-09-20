@@ -135,6 +135,12 @@ Definição de Ordem de Serviço:
 }
 ```
 
+###### Para listar as ordens pendentes
+```
+GET
+http://localhost:8080/ordem/pendente
+```
+
 ###### Para iniciar trabalho em uma ordem de serviço
 ```
 PUT
