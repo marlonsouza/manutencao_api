@@ -152,3 +152,10 @@ http://localhost:8080/ordem/{numeroOrdem}/iniciar
 PUT
 http://localhost:8080/ordem/{numeroOrdem}/finalizar
 ```
+
+### Dependências
+
+- Spring boot
+- H2
+- Mapstruct
+- Lombok
