@@ -29,6 +29,10 @@ public class OrdemServicoService {
         return repository.findByInicioServicoIsNullOrderByCreatedAtDesc();
     }
 
+    public List<OrdemServico> getOrdensIniciadas(){
+        return repository.findByInicioServicoIsNotNullAndFinalServicoIsNullOrderByCreatedAtDesc();
+    }
+
     public OrdemServico findById(Long id) {
         return repository.findById(id).orElseThrow(EntityNotFoundException::new);
     }

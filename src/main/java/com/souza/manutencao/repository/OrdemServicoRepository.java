@@ -11,4 +11,6 @@ public interface OrdemServicoRepository extends JpaRepository<OrdemServico, Long
 
     List<OrdemServico> findByInicioServicoIsNullOrderByCreatedAtDesc();
 
+    List<OrdemServico> findByInicioServicoIsNotNullAndFinalServicoIsNullOrderByCreatedAtDesc();
+
 }

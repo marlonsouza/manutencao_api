@@ -54,6 +54,13 @@ public class OrdemServicoController {
         return ResponseEntity.ok(ordensPendentes);
     }
 
+    @GetMapping("/ordem/iniciada")
+    public ResponseEntity<List<OrdemServicoDTO>> getOrdensIniciadas(){
+        List<OrdemServicoDTO> ordensIniciadas = service.getOrdensIniciadas().stream().map(mapper::to).collect(Collectors.toList());
+        return  ResponseEntity.ok(ordensIniciadas);
+    }
+
+
     @PutMapping("/ordem/{id}/iniciar")
     public ResponseEntity iniciar(@PathVariable Long id){
         OrdemServico ordem = service.findById(id);
